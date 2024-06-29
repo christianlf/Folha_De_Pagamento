@@ -44,5 +44,5 @@ LICENÇA:
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 AUTOR:
-•	Seu Nome - https://www.linkedin.com/in/christian-lindoso-froz
+• Nome - https://www.linkedin.com/in/christian-lindoso-froz
 •	Email: christianlindoso18@gmail.com
