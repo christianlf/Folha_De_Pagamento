@@ -418,3 +418,4 @@ Para dúvidas ou suporte:
 ---
 
 **Desenvolvido com ❤️ usando Next.js, React e TypeScript**
+
