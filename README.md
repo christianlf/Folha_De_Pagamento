@@ -1,528 +1,420 @@
-# Infrastructure Health Monitor
+# 🛍️ FashionStore - E-commerce Premium de Moda
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+Uma loja virtual completa e profissional de moda, desenvolvida com as tecnologias mais modernas para proporcionar uma experiência premium de compra online.
 
-**Automação de Monitoramento de Saúde de Infraestrutura Corporativa**
-
-Uma ferramenta de linha de comando em Python que realiza verificações automáticas de saúde de infraestrutura de TI (servidores, endpoints de rede, serviços web) e gera relatórios e alertas detalhados.
-
-## 📋 Índice
-
-- [Visão Geral](#visão-geral)
-- [Motivação](#motivação)
-- [Arquitetura](#arquitetura)
-- [Funcionalidades](#funcionalidades)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Uso](#uso)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Testes](#testes)
-- [Exemplos](#exemplos)
-- [Melhorias Futuras](#melhorias-futuras)
-- [Contribuindo](#contribuindo)
-- [Licença](#licença)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-cyan)
+![Prisma](https://img.shields.io/badge/Prisma-Latest-green)
 
 ## 🎯 Visão Geral
 
-O **Infrastructure Health Monitor** é uma solução completa para monitoramento proativo de infraestrutura de TI. Ele permite que equipes de suporte e operações automatizem verificações de disponibilidade, meçam latência e respondam rapidamente a incidentes através de alertas configuráveis.
+FashionStore é uma aplicação completa de e-commerce focada em moda, com design moderno, elegante e profissional. A plataforma oferece uma experiência de compra intuitiva e otimizada para conversão de vendas.
 
-### Tipos de Verificação Suportados
+## ✨ Funcionalidades Implementadas
 
-- **Ping (ICMP)**: Verifica conectividade de rede básica
-- **Porta TCP**: Testa disponibilidade de serviços em portas específicas
-- **HTTP/HTTPS**: Valida status de endpoints web e APIs
+### 🏠 Frontend
 
-## 💡 Motivação
+#### Página Inicial
+- ✅ Hero banner com imagens de alta qualidade
+- ✅ Seções de produtos em destaque
+- ✅ Vitrine de tendências
+- ✅ Novidades
+- ✅ Banner promocional
+- ✅ Newsletter
+- ✅ Features (frete, segurança, trocas)
+- ✅ Design responsivo completo
 
-Este projeto nasceu da necessidade de preencher a lacuna entre:
-- **Suporte de TI**: Necessidade de ferramentas simples e eficazes para monitoramento básico
-- **DevOps/SRE**: Práticas modernas de automação e observabilidade
+#### Navegação
+- ✅ Header premium com logo e menu
+- ✅ Busca de produtos
+- ✅ Ícones de usuário, favoritos e carrinho
+- ✅ Menu mobile responsivo
+- ✅ Contador de itens no carrinho
 
-Objetivos principais:
-- Reduzir tempo de detecção de falhas
-- Automatizar tarefas repetitivas de verificação
-- Fornecer dados históricos para análise de tendências
-- Facilitar troubleshooting com logs estruturados
+#### Componentes
+- ✅ ProductCard premium com:
+  - Imagens com hover e zoom
+  - Badges (Novo, Desconto)
+  - Botão de favorito
+  - Quick add ao carrinho
+  - Avaliações em estrelas
+  - Mostruário de cores disponíveis
+  - Preços com desconto
 
-## 🏗️ Arquitetura
+### 🛒 Sistema de Carrinho
+- ✅ Context API para gerenciamento global
+- ✅ Persistência no localStorage
+- ✅ Adicionar/remover produtos
+- ✅ Atualizar quantidades
+- ✅ Contador total de itens
+- ✅ Cálculo automático de subtotal
+
+### 🗄️ Banco de Dados
+- ✅ Schema Prisma completo com:
+  - Usuários e autenticação
+  - Produtos com variantes (tamanho/cor)
+  - Categorias
+  - Pedidos completos
+  - Avaliações
+  - Favoritos
+  - Tendências
+  - Cupons de desconto
+  - Newsletter
+  - Logs de pedidos
+
+### 🎨 Design
+- ✅ Interface moderna e minimalista
+- ✅ Tipografia profissional
+- ✅ Espaçamento consistente
+- ✅ Animações suaves
+- ✅ Totalmente responsivo (mobile, tablet, desktop)
+- ✅ Acessibilidade básica
+
+## 🚧 Funcionalidades a Implementar
+
+### Páginas
+- [ ] Catálogo completo com filtros avançados
+- [ ] Página detalhada do produto
+- [ ] Página do carrinho
+- [ ] Checkout (3-4 etapas)
+- [ ] Página de sucesso pós-compra
+- [ ] Área do cliente (Minha Conta)
+- [ ] Favoritos
+- [ ] Rastreamento de pedidos
+- [ ] Páginas institucionais (Sobre, Contato, FAQ, etc.)
+
+### Sistema de Produtos
+- [ ] API routes para produtos
+- [ ] Filtros por categoria, tamanho, cor, preço
+- [ ] Ordenação (relevância, preço, novidade)
+- [ ] Paginação
+- [ ] Busca com autocomplete
+- [ ] Guia de tamanhos
+- [ ] Consulta de frete por CEP
+
+### Autenticação
+- [ ] Sistema de login/registro
+- [ ] Next Auth configurado
+- [ ] Recuperação de senha
+- [ ] Verificação de email
+- [ ] Autenticação social (Google, Facebook)
+
+### Checkout e Pagamentos
+- [ ] Integração com Stripe/Mercado Pago
+- [ ] Processamento de cartão de crédito
+- [ ] Suporte a PIX
+- [ ] Webhooks para confirmação
+- [ ] Geração automática de pedidos
+- [ ] Sistema de cupons funcionais
+- [ ] Cálculo de frete real
+
+### Área do Cliente
+- [ ] Dashboard de pedidos
+- [ ] Histórico de compras
+- [ ] Gerenciamento de endereços
+- [ ] Gerenciamento de favoritos
+- [ ] Atualização de dados pessoais
+- [ ] Avaliações de produtos
+
+### Painel Administrativo
+- [ ] Dashboard com métricas
+- [ ] Gerenciamento de produtos (CRUD completo)
+- [ ] Upload de imagens
+- [ ] Gerenciamento de variantes
+- [ ] Controle de estoque
+- [ ] Gerenciamento de pedidos
+- [ ] Atualização de status
+- [ ] Códigos de rastreamento
+- [ ] Gerenciamento de clientes
+- [ ] Sistema de cupons
+- [ ] Criação de tendências/coleções
+- [ ] Relatórios e gráficos
+
+### Avaliações
+- [ ] Sistema de avaliações completo
+- [ ] Apenas clientes que compraram podem avaliar
+- [ ] Moderação de comentários
+- [ ] Média de avaliações
+
+### SEO e Performance
+- [ ] Metadata dinâmica por página
+- [ ] URLs amigáveis
+- [ ] Sitemap XML
+- [ ] Robots.txt
+- [ ] Open Graph tags
+- [ ] Dados estruturados (JSON-LD)
+- [ ] Otimização de imagens
+- [ ] Lazy loading
+
+### Segurança
+- [ ] Validação de dados no backend
+- [ ] Proteção CSRF
+- [ ] Rate limiting
+- [ ] Sanitização de inputs
+- [ ] Hashing de senhas com bcrypt
+- [ ] Variáveis de ambiente protegidas
+- [ ] HTTPS obrigatório em produção
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
+- **Next.js 16** - Framework React com App Router
+- **React 19** - Biblioteca UI
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework CSS utility-first
+- **Lucide React** - Biblioteca de ícones moderna
+
+### Backend
+- **Next.js API Routes** - Endpoints serverless
+- **Prisma** - ORM para banco de dados
+- **PostgreSQL** - Banco de dados relacional
+- **Next Auth** - Autenticação
+
+### Pagamentos
+- **Stripe** - Gateway de pagamento internacional
+- Ou **Mercado Pago** - Gateway brasileiro
+
+### Outros
+- **date-fns** - Manipulação de datas
+- **zod** - Validação de schemas
+- **react-hook-form** - Gerenciamento de formulários
+- **clsx** - Utilitário para classes CSS
+
+## 📦 Estrutura do Projeto
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                        main.py (CLI)                        │
-│              (Orquestração e Interface do Usuário)          │
-└─────────────────────────────────────────────────────────────┘
-                              │
-        ┌─────────────────────┼─────────────────────┐
-        │                     │                     │
-        ▼                     ▼                     ▼
-┌──────────────┐      ┌──────────────┐      ┌──────────────┐
-│   Checkers   │      │   Storage    │      │    Alerts    │
-├──────────────┤      ├──────────────┤      ├──────────────┤
-│ PingChecker  │      │   Database   │      │AlertManager  │
-│ PortChecker  │◄────►│   (SQLite)   │◄────►│   (Logs)     │
-│ HTTPChecker  │      │              │      │              │
-└──────────────┘      └──────────────┘      └──────────────┘
-                              │
-                              ▼
-                      ┌──────────────┐
-                      │   Reports    │
-                      ├──────────────┤
-                      │ReportGen     │
-                      │(CSV/JSON)    │
-                      └──────────────┘
+fashion-store/
+├── app/                      # Páginas Next.js (App Router)
+│   ├── layout.tsx           # Layout raiz
+│   └── page.tsx             # Página inicial
+├── components/              # Componentes React
+│   ├── Header.tsx           # Cabeçalho premium
+│   ├── Footer.tsx           # Rodapé
+│   └── ProductCard.tsx      # Card de produto
+├── context/                 # Contextos React
+│   └── CartContext.tsx      # Gerenciamento do carrinho
+├── lib/                     # Bibliotecas e utilidades
+│   ├── utils.ts             # Funções utilitárias
+│   └── mock-data.ts         # Dados de exemplo
+├── prisma/                  # Configuração Prisma
+│   └── schema.prisma        # Schema do banco de dados
+├── types/                   # Definições TypeScript
+│   └── index.ts             # Interfaces principais
+└── public/                  # Arquivos estáticos
 ```
 
-### Componentes Principais
-
-1. **Checkers**: Módulos especializados para cada tipo de verificação
-2. **Storage**: Camada de persistência com SQLite para histórico
-3. **Alerts**: Sistema de alertas baseado em limites configuráveis
-4. **Reports**: Geração de relatórios em múltiplos formatos
-5. **Config**: Gerenciamento centralizado de configurações
-
-## ✨ Funcionalidades
-
-### Verificações de Saúde
-
-- ✅ Ping ICMP para verificar conectividade básica
-- ✅ Verificação de porta TCP para serviços específicos
-- ✅ Verificação HTTP/HTTPS com validação de status code
-- ✅ Medição de tempo de resposta para todas as verificações
-- ✅ Tratamento robusto de erros e timeouts
-
-### Armazenamento e Histórico
-
-- ✅ Banco de dados SQLite local para histórico completo
-- ✅ Índices otimizados para consultas rápidas
-- ✅ Rastreamento de falhas consecutivas
-- ✅ Cálculo automático de estatísticas
-
-### Sistema de Alertas
-
-- ✅ Alertas baseados em limites de falhas consecutivas
-- ✅ Log estruturado de alertas com timestamp
-- ✅ Detecção de recuperação de serviços
-- ✅ Arquitetura extensível para notificações futuras (email, webhook)
-
-### Relatórios
-
-- ✅ Exportação em CSV para análise em planilhas
-- ✅ Exportação em JSON para integração com outras ferramentas
-- ✅ Relatório de resumo legível para humanos
-- ✅ Estatísticas agregadas (taxa de sucesso, tempo médio de resposta)
-
-### Interface CLI
-
-- ✅ Verificação única sob demanda
-- ✅ Monitoramento contínuo com intervalo configurável
-- ✅ Geração de relatórios com filtros por período
-- ✅ Saída colorida e formatada em tabelas
-
-## 🚀 Instalação
+## 🚀 Como Executar
 
 ### Pré-requisitos
 
-- Python 3.10 ou superior
-- pip (gerenciador de pacotes Python)
-- Git
+- Node.js 18+ instalado
+- PostgreSQL instalado e rodando
+- npm ou yarn
 
-### Passo a Passo
+### Instalação
 
-1. **Clone o repositório**
-
-```bash
-git clone <repository-url>
-cd infra-health-monitor
-```
-
-2. **Crie um ambiente virtual (recomendado)**
+1. Navegue até a pasta do projeto:
 
 ```bash
-python -m venv venv
-
-# Linux/Mac
-source venv/bin/activate
-
-# Windows
-venv\Scripts\activate
+cd fashion-store
 ```
 
-3. **Instale as dependências**
+2. Instale as dependências:
 
 ```bash
-pip install -r requirements.txt
+npm install
 ```
 
-4. **Configure as variáveis de ambiente**
+3. Configure as variáveis de ambiente:
 
 ```bash
-cp .env.example .env
-# Edite .env conforme necessário (valores padrão já funcionam)
+cp .env.example .env.local
 ```
 
-5. **Configure os alvos de monitoramento**
+Edite o arquivo `.env.local` com suas configurações:
 
-Edite o arquivo `targets.yaml` para adicionar seus próprios hosts e serviços:
-
-```yaml
-targets:
-  - name: "Meu Servidor Web"
-    type: "http"
-    url: "https://meusite.com"
-    expected_status: 200
-    enabled: true
+```env
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/fashion_store"
+NEXTAUTH_SECRET="sua-chave-secreta-segura"
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_test_sua_chave"
+STRIPE_SECRET_KEY="sk_test_sua_chave"
 ```
 
-## ⚙️ Configuração
-
-### Arquivo .env
-
-Configure o comportamento da aplicação através do arquivo `.env`:
+4. Inicialize o banco de dados:
 
 ```bash
-# Timeout padrão para operações de rede (segundos)
-DEFAULT_TIMEOUT=5
-
-# Número de falhas consecutivas antes de gerar alerta
-ALERT_THRESHOLD=3
-
-# Caminho do banco de dados
-DATABASE_PATH=health_monitor.db
-
-# Caminho do log de alertas
-ALERT_LOG_PATH=alerts.log
-
-# Nível de logging (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-LOG_LEVEL=INFO
+npx prisma generate
+npx prisma db push
 ```
 
-### Arquivo targets.yaml
-
-Defina os alvos a serem monitorados:
-
-```yaml
-targets:
-  # Verificação de Ping
-  - name: "Google DNS"
-    type: "ping"
-    host: "8.8.8.8"
-    enabled: true
-
-  # Verificação de Porta TCP
-  - name: "Servidor SSH"
-    type: "port"
-    host: "192.168.1.10"
-    port: 22
-    enabled: true
-
-  # Verificação HTTP/HTTPS
-  - name: "API de Produção"
-    type: "http"
-    url: "https://api.minhaempresa.com/health"
-    expected_status: 200
-    enabled: true
-```
-
-## 📖 Uso
-
-### Comando: check
-
-Executa uma verificação única em todos os alvos configurados.
+5. (Opcional) Popule o banco com dados de exemplo:
 
 ```bash
-python main.py check
+npx prisma db seed
 ```
 
-**Exemplo de saída:**
-
-```
-+------------------+------+--------+---------------+-------+
-| Target           | Type | Status | Response Time | Error |
-+==================+======+========+===============+=======+
-| Google DNS       | ping | ✓ OK   | 12.45ms       |       |
-| GitHub API       | http | ✓ OK   | 234.12ms      |       |
-| Local Server     | port | ✗ FAIL | N/A           | Timeout|
-+------------------+------+--------+---------------+-------+
-
-Summary:
-  Total: 3
-  Successful: 2
-  Failed: 1
-  Success Rate: 66.7%
-```
-
-### Comando: monitor
-
-Executa monitoramento contínuo com intervalo especificado.
+### Executar em Desenvolvimento
 
 ```bash
-python main.py monitor --interval 60
+npm run dev
 ```
 
-**Opções:**
-- `--interval`: Intervalo entre verificações em segundos (padrão: 60)
+Acesse [http://localhost:3000](http://localhost:3000)
 
-**Exemplo:**
+### Build para Produção
 
 ```bash
-# Monitorar a cada 5 minutos
-python main.py monitor --interval 300
-
-# Parar com Ctrl+C
+npm run build
+npm start
 ```
 
-### Comando: report
+## 🎨 Design e UX
 
-Gera relatórios a partir do histórico armazenado.
+### Princípios de Design
 
-```bash
-python main.py report --format csv --last 24h
-```
+- **Minimalismo**: Design limpo com foco no produto
+- **Hierarquia Visual**: Elementos importantes destacados
+- **Espaço em Branco**: Respiração entre elementos
+- **Consistência**: Padrões visuais mantidos em toda a aplicação
+- **Responsividade**: Adaptação perfeita a todos os dispositivos
 
-**Opções:**
-- `--format`: Formato do relatório (csv, json, summary, all)
-- `--last`: Período de tempo (ex: 24h, 7d, 30d)
+### Paleta de Cores
 
-**Exemplos:**
+- **Principal**: Preto (#000000)
+- **Secundária**: Branco (#FFFFFF)
+- **Acentos**: Cinza (#808080)
+- **Erro**: Vermelho (#DC2626)
+- **Sucesso**: Verde (#16A34A)
 
-```bash
-# Relatório CSV das últimas 24 horas
-python main.py report --format csv --last 24h
+### Tipografia
 
-# Relatório JSON da última semana
-python main.py report --format json --last 7d
+- **Fonte**: Inter (Google Fonts)
+- **Pesos**: 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold)
 
-# Todos os formatos do último mês
-python main.py report --format all --last 30d
+## 💳 Integração de Pagamentos
 
-# Resumo legível das últimas 12 horas
-python main.py report --format summary --last 12h
-```
+### Stripe
 
-### Opções Globais
+Para configurar o Stripe:
 
-```bash
-# Usar arquivo de alvos customizado
-python main.py --targets custom_targets.yaml check
-```
+1. Crie uma conta em [stripe.com](https://stripe.com)
+2. Obtenha suas chaves de API (test e live)
+3. Configure no `.env.local`
+4. Implemente os webhooks para confirmação
 
-## 📁 Estrutura do Projeto
+### Mercado Pago (Alternativa)
 
-```
-infra-health-monitor/
-│
-├── src/                          # Código fonte principal
-│   ├── __init__.py
-│   ├── config.py                 # Configuração e variáveis de ambiente
-│   │
-│   ├── checkers/                 # Módulos de verificação
-│   │   ├── __init__.py
-│   │   ├── ping_checker.py       # Verificação ICMP
-│   │   ├── port_checker.py       # Verificação TCP
-│   │   └── http_checker.py       # Verificação HTTP/HTTPS
-│   │
-│   ├── storage/                  # Camada de persistência
-│   │   ├── __init__.py
-│   │   └── database.py           # Interface SQLite
-│   │
-│   ├── alerts/                   # Sistema de alertas
-│   │   ├── __init__.py
-│   │   └── alert_manager.py      # Gerenciamento de alertas
-│   │
-│   └── reports/                  # Geração de relatórios
-│       ├── __init__.py
-│       └── report_generator.py   # Exportação CSV/JSON
-│
-├── tests/                        # Testes unitários
-│   ├── __init__.py
-│   ├── test_ping_checker.py
-│   ├── test_port_checker.py
-│   ├── test_http_checker.py
-│   └── test_database.py
-│
-├── main.py                       # Ponto de entrada CLI
-├── targets.yaml                  # Configuração de alvos
-├── .env.example                  # Template de variáveis de ambiente
-├── .gitignore                    # Arquivos ignorados pelo Git
-├── requirements.txt              # Dependências Python
-└── README.md                     # Esta documentação
-```
+Para o mercado brasileiro:
 
-## 🧪 Testes
+1. Crie uma conta em [mercadopago.com.br](https://mercadopago.com.br)
+2. Obtenha suas credenciais
+3. Configure no `.env.local`
+4. Implemente notificações IPN
 
-O projeto inclui testes unitários para todos os módulos principais.
+## 📊 Banco de Dados
 
-### Executar todos os testes
+### Estrutura Principal
 
-```bash
-# Com pytest
-pytest tests/ -v
+- **users**: Usuários e administradores
+- **products**: Produtos com informações básicas
+- **product_variants**: Variantes (tamanho/cor/estoque)
+- **product_images**: Múltiplas imagens por produto
+- **categories**: Categorias de produtos
+- **orders**: Pedidos dos clientes
+- **order_items**: Itens dos pedidos
+- **reviews**: Avaliações de produtos
+- **favorites**: Lista de desejos
+- **trends**: Coleções/tendências
+- **coupons**: Cupons de desconto
 
-# Com unittest
-python -m unittest discover tests/ -v
-```
+## 🔐 Segurança
 
-### Executar testes específicos
+### Implementado
+- Senhas com hash (bcrypt)
+- Validação de tipos (TypeScript)
+- Sanitização de dados (Prisma)
 
-```bash
-# Testar apenas checkers
-pytest tests/test_ping_checker.py -v
+### A Implementar
+- HTTPS obrigatório
+- CSRF protection
+- Rate limiting
+- XSS protection
+- SQL Injection protection (Prisma já protege)
+- Auditoria de logs
+- 2FA (autenticação em dois fatores)
 
-# Testar apenas database
-pytest tests/test_database.py -v
-```
+## 📱 Responsividade
 
-### Cobertura de testes
+A aplicação é totalmente responsiva e otimizada para:
 
-```bash
-pytest --cov=src tests/
-```
+- **Mobile**: 320px - 767px
+- **Tablet**: 768px - 1023px
+- **Desktop**: 1024px+
 
-## 📊 Exemplos
+## 🎯 Conversão e UX
 
-### Exemplo 1: Monitoramento de Servidor Web
+### Otimizações Implementadas
 
-```yaml
-# targets.yaml
-targets:
-  - name: "Website Principal"
-    type: "http"
-    url: "https://www.meusite.com"
-    expected_status: 200
-    enabled: true
-  
-  - name: "API Backend"
-    type: "http"
-    url: "https://api.meusite.com/health"
-    expected_status: 200
-    enabled: true
-```
+- Botões de ação destacados
+- Quick add ao carrinho
+- Imagens de alta qualidade
+- Badges informativos (Novo, Desconto)
+- Avaliações visíveis
+- Frete grátis destacado
 
-```bash
-# Monitorar a cada minuto
-python main.py monitor --interval 60
-```
+### A Implementar
 
-### Exemplo 2: Verificação de Infraestrutura de Rede
+- Trust signals (selos de segurança)
+- Urgência (estoque limitado)
+- Prova social (vendas recentes)
+- Abandono de carrinho (email)
+- Remarketing
 
-```yaml
-# targets.yaml
-targets:
-  - name: "Gateway Principal"
-    type: "ping"
-    host: "192.168.1.1"
-    enabled: true
-  
-  - name: "Servidor DNS Interno"
-    type: "port"
-    host: "192.168.1.53"
-    port: 53
-    enabled: true
-  
-  - name: "Firewall"
-    type: "ping"
-    host: "192.168.1.254"
-    enabled: true
-```
+## 📈 Próximos Passos
 
-### Exemplo 3: Monitoramento de Múltiplos Serviços
+### Prioridade Alta
+1. Implementar catálogo com filtros
+2. Criar página detalhada do produto
+3. Desenvolver checkout completo
+4. Integrar gateway de pagamento
+5. Criar painel administrativo básico
 
-```yaml
-# targets.yaml
-targets:
-  - name: "PostgreSQL"
-    type: "port"
-    host: "db.empresa.local"
-    port: 5432
-    enabled: true
-  
-  - name: "Redis"
-    type: "port"
-    host: "cache.empresa.local"
-    port: 6379
-    enabled: true
-  
-  - name: "Elasticsearch"
-    type: "http"
-    url: "http://search.empresa.local:9200"
-    expected_status: 200
-    enabled: true
-```
+### Prioridade Média
+6. Sistema de autenticação
+7. Área do cliente
+8. Avaliações de produtos
+9. Sistema de favoritos
+10. Rastreamento de pedidos
 
-## 🔮 Melhorias Futuras
+### Prioridade Baixa
+11. Relatórios avançados
+12. Sistema de cupons
+13. Email marketing
+14. Blog/conteúdo
+15. Modo escuro
 
-### Curto Prazo
+## 📝 Licença
 
-- [ ] **Notificações por Email**: Enviar alertas via SMTP
-- [ ] **Webhooks**: Integração com Slack, Discord, Microsoft Teams
-- [ ] **Dashboard Web**: Interface web simples com Flask/FastAPI
-- [ ] **Métricas Prometheus**: Exportar métricas para Prometheus
-- [ ] **Configuração de Retry**: Tentativas múltiplas antes de marcar como falha
-
-### Médio Prazo
-
-- [ ] **Suporte a SSL/TLS**: Verificar validade de certificados
-- [ ] **Verificação de DNS**: Resolver e validar registros DNS
-- [ ] **Monitoramento de Latência**: Alertas baseados em degradação de performance
-- [ ] **Agendamento Cron**: Integração nativa para execução agendada
-- [ ] **Suporte a SNMP**: Monitorar dispositivos de rede via SNMP
-
-### Longo Prazo
-
-- [ ] **Machine Learning**: Detecção de anomalias usando ML
-- [ ] **Grafana Integration**: Dashboards customizáveis
-- [ ] **Multi-tenancy**: Suporte para múltiplas organizações
-- [ ] **API REST**: Expor funcionalidades via API
-- [ ] **Mobile App**: Aplicativo mobile para alertas e visualização
-
-### Extensões de Checkers
-
-- [ ] **Database Checker**: MySQL, PostgreSQL, MongoDB, Redis
-- [ ] **FTP/SFTP Checker**: Verificar conectividade de servidores de arquivos
-- [ ] **LDAP Checker**: Verificar disponibilidade de Active Directory
-- [ ] **Custom Scripts**: Executar scripts customizados como checkers
+Este projeto foi desenvolvido como demonstração de e-commerce moderno.
 
 ## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Siga estas etapas:
+Para contribuir com o projeto:
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
+1. Fork o repositório
+2. Crie uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
 5. Abra um Pull Request
 
-### Diretrizes
+## 📧 Suporte
 
-- Mantenha o código limpo e bem documentado
-- Adicione testes para novas funcionalidades
-- Siga as convenções de código Python (PEP 8)
-- Atualize a documentação conforme necessário
-- Use type hints para todas as funções públicas
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 👥 Autores
-
-- **Infrastructure Team** - Desenvolvimento inicial
-
-## 🙏 Agradecimentos
-
-- Comunidade Python por suas excelentes bibliotecas
-- Equipes de Suporte de TI que inspiraram este projeto
-- Todos os contribuidores que ajudaram a melhorar esta ferramenta
-
-## 📞 Suporte
-
-Para dúvidas, sugestões ou problemas:
-
-- Abra uma [Issue](../../issues)
-- Consulte a [Wiki](../../wiki)
-- Entre em contato com a equipe de infraestrutura
+Para dúvidas ou suporte:
+- Email: contato@fashionstore.com
+- Issues: GitHub Issues
 
 ---
 
-**Desenvolvido com ❤️ para facilitar o trabalho de equipes de TI**
+**Desenvolvido com ❤️ usando Next.js, React e TypeScript**
