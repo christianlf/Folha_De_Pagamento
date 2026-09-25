@@ -32,7 +32,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold tracking-tight">
-            FASHION<span className="text-gray-400">STORE</span>
+            FREITAS_IMPORTS
           </Link>
 
           {/* Desktop Navigation */}
