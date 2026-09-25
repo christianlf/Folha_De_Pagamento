@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="font-bold text-lg mb-4">FASHIONSTORE</h3>
+            <h3 className="font-bold text-lg mb-4">FREITAS_IMPORTS</h3>
             <p className="text-gray-600 text-sm mb-4">
               Sua loja de moda online com as últimas tendências e os melhores preços.
             </p>
@@ -82,7 +82,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-600">
-              © {currentYear} FashionStore. Todos os direitos reservados.
+              © {currentYear} Freitas Imports. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm text-gray-600">
               <Link href="/privacidade" className="hover:text-black transition-colors">
