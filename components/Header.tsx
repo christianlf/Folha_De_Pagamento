@@ -15,7 +15,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       {/* Top Banner */}
       <div className="bg-black text-white text-center py-2 text-sm">
-        <p>Frete grátis em compras acima de R$ 299 | Parcele em até 6x sem juros</p>
+        <p>🔥 Frete grátis em compras acima de R$ 299 | Parcele em até 6x sem juros 🔥</p>
       </div>
 
       {/* Main Header */}
